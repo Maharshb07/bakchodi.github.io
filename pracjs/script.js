@@ -1,8 +1,10 @@
+
 function detect() {
     var a = document.getElementById("name").value
-    name = a.toLowerCase()
+    name = a.charAt(0).toLowerCase();
 
-    if (name === "aaryen") {
+    if (name === "a"||name === "s"||name === "d"||name === "b") {
+        this.textContent = "Lmao!!";
         var message = a + " Buddhu !!";
         document.getElementById("content").textContent = message;
         var newtitle = document.getElementById("title").textContent;
@@ -11,6 +13,7 @@ function detect() {
 
     }
     else {
+        this.textContent = "Shabash!!";
         var newtitle = document.getElementById("title").textContent;
         newtitle = "Fool Detector !!";
         document.getElementById("title").textContent = newtitle; 
@@ -20,3 +23,5 @@ function detect() {
     
 
 }
+document.querySelector("button").addEventListener("click",detect);
+
